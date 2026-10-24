@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Level" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lv"]
+[ext_resource type="Script" path="res://scripts/species.gd" id="2_sp"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/fase2.png" id="3_bg"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="4_capim"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="5_coelho"]
+[ext_resource type="Resource" path="res://data/species/gafanhoto.tres" id="6_gafanhoto"]
+[ext_resource type="Resource" path="res://data/species/raposa.tres" id="7_raposa"]
+[ext_resource type="Resource" path="res://data/species/sapo.tres" id="8_sapo"]
+
+[resource]
+script = ExtResource("1_lv")
+id = "fase2"
+titulo = "Fase 2: Teia alimentar"
+descricao = "Mantenha capim, coelho, raposa e sapo. Leia o que cada espécie come."
+fundo = ExtResource("3_bg")
+especies_disponiveis = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("5_coelho"), ExtResource("6_gafanhoto"), ExtResource("7_raposa"), ExtResource("8_sapo")])
+especies_obrigatorias = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("5_coelho"), ExtResource("7_raposa"), ExtResource("8_sapo")])
+orcamento = 9
+objetivo_turnos = 20
+dica = "Um predador só sobrevive se houver presas suficientes. Veja o que o sapo come e quantos pontos sobram no orçamento."

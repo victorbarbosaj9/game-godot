@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/caramujo.png" id="2_ico"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="3_capim"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Caramujo"
+tipo = 1
+descricao = "Espécie invasora: come capim, se reproduz rápido e quase não tem predadores aqui."
+icone = ExtResource("2_ico")
+cor = Color(0.85, 0.35, 0.3, 1)
+custo = 0
+populacao_inicial = 40.0
+taxa_crescimento = 0.5
+come = Array[ExtResource("1_sp")]([ExtResource("3_capim")])
+taxa_caca = 0.5
+eficiencia = 2.0
+k_base = 1000.0

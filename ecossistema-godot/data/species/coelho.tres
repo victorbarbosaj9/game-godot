@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/coelho.png" id="2_ico"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="3_capim"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Coelho"
+tipo = 1
+descricao = "Herbívoro: come capim. Sua população é limitada pela quantidade de capim."
+icone = ExtResource("2_ico")
+cor = Color(0.8, 0.65, 0.45, 1)
+custo = 2
+populacao_inicial = 100.0
+taxa_crescimento = 0.6
+come = Array[ExtResource("1_sp")]([ExtResource("3_capim")])
+taxa_caca = 0.8
+eficiencia = 0.5
+k_base = 1000.0

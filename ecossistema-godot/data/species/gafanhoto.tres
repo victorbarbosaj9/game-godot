@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/gafanhoto.png" id="2_ico"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="3_capim"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Gafanhoto"
+tipo = 1
+descricao = "Herbívoro pequeno: come capim e se reproduz rápido. Serve de alimento para o sapo."
+icone = ExtResource("2_ico")
+cor = Color(0.95, 0.85, 0.25, 1)
+custo = 1
+populacao_inicial = 300.0
+taxa_crescimento = 0.8
+come = Array[ExtResource("1_sp")]([ExtResource("3_capim")])
+taxa_caca = 0.15
+eficiencia = 0.6
+k_base = 1000.0

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Level" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lv"]
+[ext_resource type="Script" path="res://scripts/species.gd" id="2_sp"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/fase3.png" id="3_bg"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="4_capim"]
+[ext_resource type="Resource" path="res://data/species/caramujo.tres" id="5_caramujo"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="6_coelho"]
+[ext_resource type="Resource" path="res://data/species/gafanhoto.tres" id="7_gafanhoto"]
+[ext_resource type="Resource" path="res://data/species/raposa.tres" id="8_raposa"]
+[ext_resource type="Resource" path="res://data/species/sapo.tres" id="9_sapo"]
+
+[resource]
+script = ExtResource("1_lv")
+id = "fase3"
+titulo = "Fase 3: Espécie invasora"
+descricao = "O caramujo-africano (espécie invasora) já está no ecossistema e não pode ser removido. Proteja capim e coelho."
+fundo = ExtResource("3_bg")
+especies_disponiveis = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("6_coelho"), ExtResource("7_gafanhoto"), ExtResource("8_raposa"), ExtResource("9_sapo")])
+especies_iniciais = Array[ExtResource("2_sp")]([ExtResource("5_caramujo")])
+especies_obrigatorias = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("6_coelho")])
+orcamento = 6
+objetivo_turnos = 25
+dica = "Uma espécie invasora sem predadores consome o alimento de todas as outras. Um predador que come a invasora ajuda, mas precisa de outras presas para se sustentar."

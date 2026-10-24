@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Level" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lv"]
+[ext_resource type="Script" path="res://scripts/species.gd" id="2_sp"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/fase1.png" id="3_bg"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="4_capim"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="5_coelho"]
+[ext_resource type="Resource" path="res://data/species/raposa.tres" id="6_raposa"]
+
+[resource]
+script = ExtResource("1_lv")
+id = "fase1"
+titulo = "Fase 1: Campo aberto"
+descricao = "Você tem 6 pontos: o suficiente para colocar as três espécies."
+fundo = ExtResource("3_bg")
+especies_disponiveis = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("5_coelho"), ExtResource("6_raposa")])
+especies_obrigatorias = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("5_coelho"), ExtResource("6_raposa")])
+orcamento = 6
+objetivo_turnos = 20
+dica = "Os coelhos dependem do capim e as raposas dependem dos coelhos. A capacidade de suporte (K) de cada espécie depende de quanto alimento existe."

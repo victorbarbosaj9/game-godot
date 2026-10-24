@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/capim.png" id="2_ico"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Capim"
+tipo = 0
+descricao = "Produtor: faz fotossíntese e é a base da cadeia. Cresce com luz e água."
+icone = ExtResource("2_ico")
+cor = Color(0.4, 0.75, 0.3, 1)
+custo = 1
+populacao_inicial = 500.0
+taxa_crescimento = 0.5
+taxa_caca = 1.0
+eficiencia = 0.5
+k_base = 1000.0

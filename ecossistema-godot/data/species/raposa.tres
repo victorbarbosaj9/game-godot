@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/raposa.png" id="2_ico"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="3_coelho"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Raposa"
+tipo = 1
+descricao = "Predador: come coelhos. Sem coelhos suficientes, a população cai."
+icone = ExtResource("2_ico")
+cor = Color(0.95, 0.5, 0.2, 1)
+custo = 3
+populacao_inicial = 10.0
+taxa_crescimento = 0.3
+come = Array[ExtResource("1_sp")]([ExtResource("3_coelho")])
+taxa_caca = 2.0
+eficiencia = 0.1
+k_base = 1000.0

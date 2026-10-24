@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Level" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lv"]
+[ext_resource type="Script" path="res://scripts/species.gd" id="2_sp"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/fase4.png" id="3_bg"]
+[ext_resource type="Resource" path="res://data/species/capim.tres" id="4_capim"]
+[ext_resource type="Resource" path="res://data/species/cobra.tres" id="5_cobra"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="6_coelho"]
+[ext_resource type="Resource" path="res://data/species/gafanhoto.tres" id="7_gafanhoto"]
+[ext_resource type="Resource" path="res://data/species/raposa.tres" id="8_raposa"]
+[ext_resource type="Resource" path="res://data/species/sapo.tres" id="9_sapo"]
+
+[resource]
+script = ExtResource("1_lv")
+id = "fase4"
+titulo = "Fase 4: Ação humana"
+descricao = "No turno 10 haverá desmatamento e seca: luz e água caem pela metade. A cobra come sapos e coelhos. Planeje o que o ambiente ainda vai sustentar."
+fundo = ExtResource("3_bg")
+especies_disponiveis = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("6_coelho"), ExtResource("7_gafanhoto"), ExtResource("8_raposa"), ExtResource("9_sapo"), ExtResource("5_cobra")])
+especies_obrigatorias = Array[ExtResource("2_sp")]([ExtResource("4_capim"), ExtResource("6_coelho"), ExtResource("5_cobra")])
+orcamento = 7
+objetivo_turnos = 30
+evento_turno = 10
+evento_luz = 0.5
+evento_agua = 0.5
+evento_texto = "Desmatamento e seca! A luz e a água caíram pela metade e a capacidade de suporte do capim diminuiu."
+dica = "Quando o ambiente perde recursos, o K cai e ele sustenta menos indivíduos. Um predador de topo com mais de um tipo de presa resiste melhor, mas competir com outro predador pela mesma presa derruba as duas populações."

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/species.gd" id="1_sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/cobra.png" id="2_ico"]
+[ext_resource type="Resource" path="res://data/species/sapo.tres" id="3_sapo"]
+[ext_resource type="Resource" path="res://data/species/coelho.tres" id="4_coelho"]
+
+[resource]
+script = ExtResource("1_sp")
+nome = "Cobra"
+tipo = 1
+descricao = "Predador de topo: come sapos e coelhos. Precisa de presas suficientes e compete com a raposa pelos coelhos."
+icone = ExtResource("2_ico")
+cor = Color(0.62, 0.45, 0.85, 1)
+custo = 3
+populacao_inicial = 6.0
+taxa_crescimento = 0.25
+come = Array[ExtResource("1_sp")]([ExtResource("3_sapo"), ExtResource("4_coelho")])
+taxa_caca = 1.0
+eficiencia = 0.2
+k_base = 1000.0
